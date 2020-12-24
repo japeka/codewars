@@ -38,3 +38,22 @@ namespace bit_vector_set
         }
     }
 }
+
+
+/* JS version of the function
+function sortByBit(array) {
+  if(array.length==0)  
+    return 0;
+  let bit32Arr = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];	
+  array.forEach((item) => {
+	if(item < bit32Arr.length){
+		bit32Arr[item]=1;
+	}
+  });
+  bit32Arr = bit32Arr.reverse();
+  let sum = 0;
+  for(let i = bit32Arr.length - 1, j=0; i >=0; i--,j++){
+    sum += (bit32Arr[i]*Math.pow(2,j));
+  }
+  return sum;
+}*/
