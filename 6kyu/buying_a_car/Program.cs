@@ -45,17 +45,10 @@ namespace buying_a_car
                     if (i % 2 == 0)
                     {
                         percentLossByMonth += 0.5;
-                        oldCar = oldCar * ((100 - (percentLossByMonth + 0.5)) / 100);
-                        newCar = newCar * ((100 - (percentLossByMonth + 0.5)) / 100);
-                    }
-                    else
-                    {
-                        oldCar = oldCar * ((100 - percentLossByMonth) / 100);
-                        newCar = newCar * ((100 - percentLossByMonth) / 100);
                     }
 
-                        oldCar = oldCar * ((100 - percentLossByMonth) / 100);
-                        newCar = newCar * ((100 - percentLossByMonth) / 100);
+                    oldCar = oldCar * ((100 - percentLossByMonth) / 100);
+                    newCar = newCar * ((100 - percentLossByMonth) / 100);
 
                     subtr = (savings + oldCar) - newCar;
                     if (subtr >= 0)
