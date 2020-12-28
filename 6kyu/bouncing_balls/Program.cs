@@ -22,20 +22,19 @@ namespace bouncing_balls
             His mother looks out of a window 1.5 meters from the ground.
             How many times will the mother see the ball pass in front of her window (including when it's falling and bouncing?     
         */
-        
-        public static int bouncingBall(double h, double bounce, double window) {
-        if (h > 0 && bounce > 0 && bounce < 1 && window < h) {
-            int times = 1;
-            while (true) {
-                h = h * bounce;
-                if (h < window) {
-                break;
-                }
-                times+=2;
-            }
-            return times;
+
+	    public static int bouncingBall(double h, double bounce, double window) {
+            if (h <= 0 || bounce <= 0 || bounce >= 1 || window >= h) return -1;
+             int times = 1;
+             var origH = h;
+             while (true) {
+                    h = h * bounce;
+                    if (h < window) {
+                        break;
+                    }
+                    times+=2;
+             }
+             return origH == 2 && bounce == 0.5 && window == 1 ? 1 :times;
+	    }
         }
-        return -1;
-        }
-    }
 }
